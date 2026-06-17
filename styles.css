@@ -1,0 +1,227 @@
+:root {
+  --header-height: 64px;
+  --main-color: #00497a;
+  --main-color-light: #429EA6;
+  --accent-color: #291711;
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; }
+
+html{
+  scroll-behavior: smooth;
+    scroll-padding-top: 125px;
+
+}
+
+body {
+  margin: 0;
+  font-family: Elms Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: var(--header-height);
+  color: #222;
+  min-width: 1000px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-image: url("assets/img/blue_bg.jpg") ;
+  background-size: cover;
+  background-position: 20% 40%;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  height: 120px;
+    min-width: 1000px;
+
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1em;
+  padding-bottom: 8px;
+}
+
+.header-container {
+  width: 100%;
+  
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand { margin: 0; font-size: 1.05rem; }
+
+.nav { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; }
+.nav a {
+     color: white; 
+     text-decoration: none; 
+     padding: 8px; 
+     display: inline-block;
+     transition: background 0.3s, border-radius 0.3s; 
+    }
+.nav a:hover, .nav a:focus {
+     background: var(--accent-color); 
+     border-radius: 4px;
+     color:white 
+    }
+
+
+.faq-section h2 {
+     margin-top: 0;
+     color: var(--main-color);
+     font-weight: 800;
+     font-size: 22pt;
+     letter-spacing: -.04em;
+     padding: 5px 10px;
+      text-align: center; 
+    }
+
+    p{
+      font-size: 1.2rem;
+    }
+/* Ensure anchor targets are visible below the fixed header */
+.section { scroll-margin-top: calc(var(--header-height) + 8px); }
+
+input[type="text"] { padding: 8px; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+
+@media (max-width: 640px) {
+  .nav { gap: 8px; font-size: 0.95rem; }
+}
+
+
+.elms-sans-bold {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.footer{
+  text-align: center;
+  padding: 10px 0 10px 0;
+  color: white;
+  background: var(--main-color);
+}
+
+/*faq accordian
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 18px;
+  margin:auto;
+  width: 100%;
+  text-align: left;
+  font-size: 16pt;
+  border: black solid 1pt;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: black;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 0;
+  margin:0;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  text-align: left;
+}
+.accordion:after {
+  content: "+"; /* Unicode character for "plus" sign (+) */
+  font-size: 24px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+  margin: 0px;
+  padding: 0px
+}
+
+.active:after {
+  content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+.faq-block{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers horizontally */
+  align-items: left;     /* Centers vertically */
+  margin: 0;   
+  padding:0;
+
+}
+
+.trendy{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:650px;
+  margin:auto;
+  border-radius: 5px;
+  border: var(--main-color) solid 3pt;
+  padding: 10px 20px 10px 20px;
+  overflow: visible;
+  position: relative;
+  margin: 20px auto 50px auto;
+}
+
+.trendy-title p{
+  font-size: 50pt;
+  font-weight: 800;
+  color: var(--main-color);
+  padding: 0 10px 10px 10px;
+  margin: 0;
+}
+.trendy-title{
+  margin: 25px -500px 25px -500px;
+  padding: 0;
+  background: white;
+}
+
+.team-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 30px;
+
+}
+
+.team-name{
+  font-size: 16pt;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+.team-text{
+  padding: 10px 0 10px 0;
+}
+
+.team-image img{
+  width: 240px;
+  height:240px;
+  object-fit: cover;
+  border: black solid 1pt;
+}
