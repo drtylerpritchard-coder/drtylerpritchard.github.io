@@ -111,7 +111,8 @@ p {
 }
 
 .nav a:hover,
-.nav a:focus {
+.nav a:focus,
+.upcomming-link:hover {
   background: var(--accent-color);
   border-radius: 4px;
   color: white
@@ -129,6 +130,7 @@ p {
 .tyler-img img{
     object-position: 5% top;
 }
+
 .about{
   height:80vh;
   margin:auto;
@@ -189,10 +191,23 @@ p {
   min-width: 0;
 }
 
+.upcomming-link{
+  border: 1pt solid black;
+  background-color: var(--main-color);
+  color:white;
+  border-radius: 4pt;
+  padding: 4px 8px 4px 8px;
+  text-decoration: none;
+    transition: background 0.3s, border-radius 0.3s;
 
-@media (max-width: 768px) {
+}
+
+@media (max-width: 1280px) {
   .about-main {
     flex-direction: column;
+  }
+  .nav a{
+    font-size: 13px;
   }
 }
 
@@ -464,4 +479,16 @@ p {
   background-size: 100% 100%;
   flex: 1;
   height: 100%;
+}
+.phase{
+  padding: 5px 25px;
+  border: 1pt solid black;
+  border-radius: 4pt;
+}
+
+.phase:first-of-type {
+  margin-bottom: 10px;
+}
+.phase h4{
+  font-size: 16pt;
 }
