@@ -142,6 +142,12 @@ p {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 900px) {
+  .about {
+    height: auto;
+  }
+}
+
 .about2{
   margin:auto;
   justify-content: center;
