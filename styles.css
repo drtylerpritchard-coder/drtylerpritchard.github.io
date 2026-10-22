@@ -430,3 +430,16 @@ p {
 /* STAGGERED DELAYS (adds depth) */
 .delay-1 { animation-delay: 0.5s; }
 .delay-2 { animation-delay: 1s; }
+
+.mark {
+ 
+  font-size: 1.75rem; /* Adjust size as needed */ 
+}
+
+.callout {
+  border-left: 2px solid var(--main-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
