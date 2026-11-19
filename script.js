@@ -41,3 +41,19 @@ const observer = new IntersectionObserver((entries) => {
 const elements = document.querySelectorAll(".hidden");
 elements.forEach(el => observer.observe(el));
 
+
+document.querySelectorAll('.slider a[data-slide]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const slide = document.getElementById(
+      link.dataset.slide
+    );
+
+    slide.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'start'
+    });
+  });
+});
